@@ -34,8 +34,9 @@ $(function(){
 function LoadOver() {
   //document.getElementById('Waiting').innerHTML = '';
   //document.getElementById('Waiting2').innerHTML = '';
-  
-  window.scrollTo((document.getElementById('ConvertedImage').width / 2) - (document.body.clientWidth / 2), document.getElementById('ConvertedImage').height / 2) - (document.body.clientWidth / 2);
+
+  //document.getElementById('ConvertedImage').style.display = "block";
+  //window.scrollTo((document.getElementById('ConvertedImage').width / 2) - (document.body.clientWidth / 2), document.getElementById('ConvertedImage').height / 2) - (document.body.clientWidth / 2);
 }
 </script>
 
@@ -44,7 +45,7 @@ function LoadOver() {
 <body class="pageView" bgcolor="#FFFFFF" style="margin: 0px">
 <DIV id="RasterDiv" style="margin:10px;cursor: move;">
 
-  <IMG id="ConvertedImage" SRC="images/NyaaCatTraffic1.png" onload="LoadOver();" ALT="卫星图">
+  <IMG id="ConvertedImage" SRC="images/NyaaCatTraffic1.png" onload="LoadOver();" ALT="卫星图" style="display: none;" >
 </DIV>
 <div id="Waiting" style="margin: auto;position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100px;height: 100px;">
 <div class="mdl-spinner mdl-js-spinner is-active" style="width: 100px;height: 100px;"></div>
