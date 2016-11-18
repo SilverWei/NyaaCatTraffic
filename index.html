@@ -57,12 +57,18 @@
         if (args) {
             var ViewLeft = $(window).scrollLeft() + (oImg.width * 0.2);
             var ViewTop = $(window).scrollTop() + (oImg.height * 0.2);
+            oImg.width = oImg.width * 1.2;
             var frame = document.getElementById('overview');
             frame.contentWindow.scrollTo(ViewLeft, ViewTop);
-            oImg.width = oImg.width * 1.2;
+alert(oImg.height);
         }
         else {
+
+            var ViewLeft = $(window).scrollLeft() - (oImg.width * 0.2);
+            var ViewTop = $(window).scrollTop() - (oImg.height * 0.2);
             oImg.width = oImg.width / 1.2;
+            var frame = document.getElementById('overview');
+            frame.contentWindow.scrollTo(ViewLeft, ViewTop);
         }
     }
 </script>
