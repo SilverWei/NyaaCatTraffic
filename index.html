@@ -54,13 +54,13 @@
   }
       function ImageChange(args) {
         var oImg = window.frames["overview"].document.getElementById("ConvertedImage");
+        alert("width:"+ oImg.width + " height:" + oImg.height + " Left:" + $(window).scrollLeft() + " Top:" + $(window).scrollTop());
         if (args) {
             var ViewLeft = $(window).scrollLeft() + (oImg.width * 0.2);
             var ViewTop = $(window).scrollTop() + (oImg.height * 0.2);
             oImg.width = oImg.width * 1.2;
             var frame = document.getElementById('overview');
             frame.contentWindow.scrollTo(ViewLeft, ViewTop);
-alert(oImg.height);
         }
         else {
 
