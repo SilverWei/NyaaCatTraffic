@@ -56,18 +56,14 @@
         var oImg = window.frames["overview"].document.getElementById("ConvertedImage");
         if (args) {
             oImg.width = oImg.width * 1.2;
+            var scroll = window.frames["overview"].scrollTop();
+            alert(scroll)
         }
         else {
             oImg.width = oImg.width / 1.2;
         }
     }
     
-</script>
-<script type="text/javascript">
-function ImageLoad(){ 
-  window.frames["overview"].scrollTo(1500, 500);
-}
-window.onload = ImageLoad; 
 </script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="styles.css">
