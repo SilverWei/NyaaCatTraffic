@@ -30,16 +30,17 @@ $(function(){
 
 function LoadOver() {
  // document.getElementById('Waiting').innerHTML = '';
-  window.scrollTo(4227, 5151);
+  window.scrollTo(document.getElementById('ConvertedImage').width / 2, document.getElementById('ConvertedImage').height / 2);
 }
 </script>
 
 </head>
-<body class="pageView" bgcolor="#FFFFFF" style="margin: 0px">
-<DIV id="RasterDiv" style="margin:10px;cursor: move;">
 <div id="Waiting">
 <div class="mdl-spinner mdl-js-spinner is-active"></div>
 </div>
+<body class="pageView" bgcolor="#FFFFFF" style="margin: 0px">
+<DIV id="RasterDiv" style="margin:10px;cursor: move;">
+
   <IMG id="ConvertedImage" SRC="images/NyaaCatTraffic1.png" onload="LoadOver();" ALT="卫星图">
 </DIV>
 </body>
