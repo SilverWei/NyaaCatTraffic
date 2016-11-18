@@ -30,7 +30,17 @@ $(function(){
     curDown = false;
   });
 })
-
+      function ImageChange(args) {
+        var oImg = document.getElementById("ConvertedImage");
+        if (args) {
+          if(document.body.clientWidth * 8 > oImg.width){
+            var ViewLeft = $(window).scrollLeft() + (((oImg.width * 1.2) - oImg.width) / 2);
+            var ViewTop = $(window).scrollTop() + (((oImg.height * 1.2) - oImg.height) / 2);
+            oImg.width = oImg.width * 1.2;
+            window.scrollTo(ViewLeft, ViewTop);
+          }
+        }
+    }
 function LoadOver() {
   document.getElementById('Waiting').style.display = "none";
 
@@ -44,7 +54,7 @@ function LoadOver() {
 <body class="pageView" bgcolor="#FFFFFF" style="margin: 0px">
 <DIV id="RasterDiv" style="margin:10px;cursor: move;">
 
-  <IMG id="ConvertedImage" SRC="images/NyaaCatTraffic1.png" onload="LoadOver();" ALT="卫星图" style="display: none;" >
+  <IMG id="ConvertedImage" SRC="images/NyaaCatTraffic1.png" ondblclick="ImageChange(true)" onload="LoadOver();" ALT="卫星图" style="display: none;" >
 </DIV>
 <div id="Waiting">
 <div style="margin: auto;position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100px;height: 100px;">
