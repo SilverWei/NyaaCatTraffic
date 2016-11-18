@@ -63,8 +63,8 @@
             frame.contentWindow.scrollTo(ViewLeft, ViewTop);
         }
         else {
-          alert("W:"+ frame.contentWindow.document.body.scrollWidth +"H:"+oImg.width);
-          if(frame.contentWindow.document.body.scrollWidth < oImg.width)
+          alert("W:"+ frame.width +"H:"+oImg.width);
+          if(frame.width < oImg.width)
           {
             var ViewLeft = $(frame.contentWindow).scrollLeft() - (oImg.width * 0.1);
             var ViewTop = $(frame.contentWindow).scrollTop() - (oImg.height * 0.1);
@@ -80,7 +80,7 @@
     function WinLoad(){
       setTimeout(function(){ViewMove();},10);
     }
-    document.getElementById('overview').onload = WinLoad();
+    document.getElementById('overview').contentWindow.onload = WinLoad();
 </script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="styles.css">
