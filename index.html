@@ -52,6 +52,9 @@
   {
     location.replace(parent.g_FileList[parent.g_CurPageIndex].PriImage);
   }
+  var oImg = window.frames["overview"].document.getElementById("ConvertedImage");
+  oImg.width = document.getElementById("overview").width;
+
       function ImageChange(args) {
         var oImg = window.frames["overview"].document.getElementById("ConvertedImage");
         if (args) {
