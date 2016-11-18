@@ -55,10 +55,10 @@
       function ImageChange(args) {
         var oImg = window.frames["overview"].document.getElementById("ConvertedImage");
         var frame = document.getElementById('overview');
-        alert("width:"+ oImg.width + " height:" + oImg.height + " Left:" + $(frame).scrollLeft() + " Top:" + $(frame).scrollTop());
+        alert("width:"+ oImg.width + " height:" + oImg.height + " Left:" + $(frame.contentWindow).scrollLeft() + " Top:" + $(frame.contentWindow).scrollTop());
         if (args) {
-            var ViewLeft = $(frame).scrollLeft() + (oImg.width * 0.1);
-            var ViewTop = $(frame).scrollTop() + (oImg.height * 0.1);
+            var ViewLeft = $(frame.contentWindow).scrollLeft() + (oImg.width * 0.1);
+            var ViewTop = $(frame.contentWindow).scrollTop() + (oImg.height * 0.1);
             oImg.width = oImg.width * 1.2;
             frame.contentWindow.scrollTo(ViewLeft, ViewTop);
         }
