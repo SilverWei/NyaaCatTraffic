@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+<title>
+卫星图
+</title>
+<script type="text/javascript" language="javascript">
+$(function(){
+  var curDown = false,
+      curYPos = 0,
+      curXPos = 0;
+  $(window).mousemove(function(m){
+    if(curDown === true){
+     $(window).scrollTop($(window).scrollTop() + (curYPos - m.pageY)); 
+     $(window).scrollLeft($(window).scrollLeft() + (curXPos - m.pageX));
+    }
+  });
+  
+  $(window).mousedown(function(m){
+    curDown = true;
+    curYPos = m.pageY;
+    curXPos = m.pageX;
+  });
+  
+  $(window).mouseup(function(){
+    curDown = false;
+  });
+})
+</script>
+</head>
+<body class="pageView" bgcolor="#FFFFFF" style="margin: 0px">
+<DIV id="RasterDiv" style="margin:10px;cursor: move;">
+  <IMG id="ConvertedImage" SRC="images/NyaaCatTraffic1.png" ALT="卫星图">
+</DIV>
+</body>
+</html>
