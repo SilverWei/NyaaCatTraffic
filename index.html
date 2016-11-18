@@ -45,7 +45,6 @@
   <link rel="stylesheet" href="./material.min.css">
 <script src="./jquery-1.8.0.js"></script>
   <script src="./material.min.js"></script>
-<script src="./antimoderate.js"></script>
 <script type="text/javascript" language="javascript">
   if( (parent.isSVG) || 
     (parent.isVML && parent.vmlSupported) ||
@@ -58,9 +57,9 @@
         var oImg = window.frames["overview"].document.getElementById("ConvertedImage");
         var frame = document.getElementById('overview');
         if (args) {
-          if(document.body.clientWidth * 10 > oImg.width){
-            var ViewLeft = $(frame.contentWindow).scrollLeft() + (oImg.width * 0.1);
-            var ViewTop = $(frame.contentWindow).scrollTop() + (oImg.height * 0.1);
+          if(document.body.clientWidth * 8 > oImg.width){
+            var ViewLeft = $(frame.contentWindow).scrollLeft() + (((oImg.width * 1.2) - oImg.width) / 2);
+            var ViewTop = $(frame.contentWindow).scrollTop() + (((oImg.height * 1.2) - oImg.height) / 2);
             oImg.width = oImg.width * 1.2;
             frame.contentWindow.scrollTo(ViewLeft, ViewTop);
           }
@@ -68,8 +67,8 @@
         else {
           if(document.body.clientWidth < oImg.width)
           {
-            var ViewLeft = $(frame.contentWindow).scrollLeft() - (oImg.width * 0.1);
-            var ViewTop = $(frame.contentWindow).scrollTop() - (oImg.height * 0.1);
+            var ViewLeft = $(frame.contentWindow).scrollLeft() - ((oImg.width - (oImg.width / 1.2)) / 2);
+            var ViewTop = $(frame.contentWindow).scrollTop() - ((oImg.height - (oImg.height / 1.2)) / 2);
             oImg.width = oImg.width / 1.2;
             frame.contentWindow.scrollTo(ViewLeft, ViewTop);
           }
