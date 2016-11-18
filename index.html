@@ -88,6 +88,12 @@ $(window).resize(function() {
     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
     var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
     if(isAndroid == true || isiOS == true){
+      var u = navigator.userAgent;
+var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+if(isAndroid == true || isiOS == true){
+    document.getElementById('Title').style.display = "none";
+}
 }
 </script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
