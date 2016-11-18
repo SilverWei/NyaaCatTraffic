@@ -55,15 +55,16 @@
       function ImageChange(args) {
         var oImg = window.frames["overview"].document.getElementById("ConvertedImage");
         if (args) {
+            var scrollLeft = $(window).scrollLeft();
+            var scrollTop = $(window).scrollTop();
+            frame.contentWindow.scrollTo(scrollLeft + (oImg.width * 0.2), scrollTop + oImg.height * 0.2);
             oImg.width = oImg.width * 1.2;
             var frame = document.getElementById('overview');
-            frame.contentWindow.scrollTo(0, 500);
         }
         else {
             oImg.width = oImg.width / 1.2;
         }
     }
-    
 </script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="styles.css">
