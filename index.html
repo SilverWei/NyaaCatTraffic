@@ -72,11 +72,12 @@
           }
         }
     }
-
-    $(window).load(function() {
+    function WinLoad(){
         var frame = document.getElementById('overview');
   frame.contentWindow.scrollTo(4227, 5151);
-});
+    }
+
+    window.onload = WinLoad();
 </script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="styles.css">
