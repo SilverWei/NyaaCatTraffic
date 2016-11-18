@@ -56,7 +56,8 @@
         var oImg = window.frames["overview"].document.getElementById("ConvertedImage");
         if (args) {
             oImg.width = oImg.width * 1.2;
-            window.frames["overview"].contentWindow.scrollTo(1000,10);
+            var frame = document.getElementById('overview');
+            frame.contentWindow.scrollTo(0, 500);
         }
         else {
             oImg.width = oImg.width / 1.2;
