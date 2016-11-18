@@ -74,6 +74,16 @@
           }
         }
     }
+    $(document).ready(function(){
+$(window).resize(function() {
+  if((document.body.clientWidth * 0.6) < document.getElementById('Title').width){
+    document.getElementById('Title').style.display = "block";
+  }
+  else{
+    document.getElementById('Title').style.display = "none";
+  }
+});
+});
 </script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="styles.css">
@@ -91,7 +101,7 @@
   </head>
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base" >
           <div class="mdl-layout--large-screen-only mdl-layout__header-row" style="position: absolute;right: 0;z-index: 5;color: white;">
-          <h3>喵窝 · 公共工程 · 二级铁路</h3>
+          <h3 id="Title">喵窝 · 公共工程 · 二级铁路</h3>
         </div>
 
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
