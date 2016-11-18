@@ -56,8 +56,8 @@
         var oImg = window.frames["overview"].document.getElementById("ConvertedImage");
         var frame = document.getElementById('overview');
         if (args) {
-            var ViewLeft = $(frame.contentWindow).scrollLeft() + (oImg.width * 0.1);
-            var ViewTop = $(frame.contentWindow).scrollTop() + (oImg.height * 0.1);
+            var ViewLeft = $(frame.contentWindow).scrollLeft();
+            var ViewTop = $(frame.contentWindow).scrollTop();
             oImg.width = oImg.width * 1.2;
             frame.contentWindow.scrollTo(ViewLeft, ViewTop);
         }
