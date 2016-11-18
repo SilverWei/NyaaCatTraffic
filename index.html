@@ -54,18 +54,18 @@
   }
       function ImageChange(args) {
         var oImg = window.frames["overview"].document.getElementById("ConvertedImage");
-        alert("width:"+ oImg.width + " height:" + oImg.height + " Left:" + $(window).scrollLeft() + " Top:" + $(window).scrollTop());
+        var frame = document.getElementById('overview');
+        alert("width:"+ oImg.width + " height:" + oImg.height + " Left:" + $(frame).scrollLeft() + " Top:" + $(frame).scrollTop());
         if (args) {
-            var ViewLeft = $(window).scrollLeft() + (oImg.width * 0.2);
-            var ViewTop = $(window).scrollTop() + (oImg.height * 0.2);
+            var ViewLeft = $(frame).scrollLeft() + (oImg.width * 0.1);
+            var ViewTop = $(frame).scrollTop() + (oImg.height * 0.1);
             oImg.width = oImg.width * 1.2;
-            var frame = document.getElementById('overview');
             frame.contentWindow.scrollTo(ViewLeft, ViewTop);
         }
         else {
 
-            var ViewLeft = $(window).scrollLeft() - (oImg.width * 0.2);
-            var ViewTop = $(window).scrollTop() - (oImg.height * 0.2);
+            var ViewLeft = $(window).scrollLeft() - (oImg.width * 0.1);
+            var ViewTop = $(window).scrollTop() - (oImg.height * 0.1);
             oImg.width = oImg.width / 1.2;
             var frame = document.getElementById('overview');
             frame.contentWindow.scrollTo(ViewLeft, ViewTop);
