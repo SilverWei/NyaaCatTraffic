@@ -89,7 +89,7 @@
           <a href="#features" class="mdl-layout__tab">交通图</a>
         </div>
       </header>
-      <main class="mdl-layout__content">
+      <main id="mdl_Main" class="mdl-layout__content">
         <iframe class="mdl-layout__tab-panel is-active" frameborder=0 src="map1.html" style="width:100%;position: absolute;height: 100%;padding: 0;" id="overview" name="overview"></iframe>
         <iframe class="mdl-layout__tab-panel" frameborder=0 src="images/favicon.png" style="width:100%;position: absolute;height: 100%;padding: 0;" id="features" name="features"></iframe>
       </main>
@@ -112,5 +112,10 @@
       <span class="visuallyhidden">remove</span>
 </button>
     <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script type="text/javascript" language="javascript">
+        var oImg = window.frames["overview"].document.getElementById("ConvertedImage");
+            oImg.width = window.document.getElementById("mdl_Main").width;
+
+</script>
   </body>
 </html>
