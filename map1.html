@@ -32,8 +32,7 @@ $(function(){
 })
 
 function LoadOver() {
-  document.getElementById('Waiting').innerHTML = '';
-  document.getElementById('Waiting2').innerHTML = '';
+ // document.getElementById('Waiting').innerHTML = '';
 
   document.getElementById('ConvertedImage').style.display = "block";
   window.scrollTo((document.getElementById('ConvertedImage').width / 2) - (document.body.clientWidth / 2), document.getElementById('ConvertedImage').height / 2) - (document.body.clientWidth / 2);
@@ -47,11 +46,13 @@ function LoadOver() {
 
   <IMG id="ConvertedImage" SRC="images/NyaaCatTraffic1.png" onload="LoadOver();" ALT="卫星图" style="display: none;" >
 </DIV>
-<div id="Waiting" style="margin: auto;position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100px;height: 100px;">
+<div id="Waiting">
+<div style="margin: auto;position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100px;height: 100px;">
 <div class="mdl-spinner mdl-js-spinner is-active" style="width: 100px;height: 100px;"></div>
 </div>
-<span id="Waiting2" class="mdl-chip" style="margin: auto;position: absolute;top: 218px;left: 0;bottom: 0;right: 0;width: 531px;height: 52px;padding-top: 23px;padding-bottom: 1px;">
+<span class="mdl-chip" style="margin: auto;position: absolute;top: 218px;left: 0;bottom: 0;right: 0;width: 531px;height: 52px;padding-top: 23px;padding-bottom: 1px;">
     <span class="mdl-chip__text" style="font-size: 30px;">图片较大，正在加载中，请耐心等候…</span>
 </span>
+</div>
 </body>
 </html>
