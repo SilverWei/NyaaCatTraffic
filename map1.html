@@ -27,12 +27,20 @@ $(function(){
     curDown = false;
   });
 })
+
+function LoadOver() {
+  document.getElementById('Waiting').innerHTML = '';
+  Window.scrollTo(4227, 5151);
+}
 </script>
 
 </head>
 <body class="pageView" bgcolor="#FFFFFF" style="margin: 0px">
 <DIV id="RasterDiv" style="margin:10px;cursor: move;">
-  <IMG id="ConvertedImage" SRC="images/NyaaCatTraffic1.png" ALT="卫星图">
+<div id="Waiting">
+<div class="mdl-spinner mdl-js-spinner is-active"></div>
+</div>
+  <IMG id="ConvertedImage" SRC="images/NyaaCatTraffic1.png" onload="LoadOver();" ALT="卫星图">
 </DIV>
 </body>
 </html>
