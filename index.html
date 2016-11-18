@@ -74,23 +74,16 @@
           }
         }
     }
-    $(document).ready(function(){
-$(window).resize(function() {
-  if((document.body.clientWidth * 0.6) > 400){
-    document.getElementById('Title').style.display = "block";
-  }
-  else{
-    document.getElementById('Title').style.display = "none";
-  }
-});
-});
-    var u = navigator.userAgent;
-    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
-    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-    if(isAndroid == true || isiOS == true){
-      alert('是否是iOS：');
-    document.getElementById('Title').style.display = "none";
-}
+//$(document).ready(function(){
+//$(window).resize(function() {
+//  if((document.body.clientWidth * 0.6) > 400){
+//    document.getElementById('Title').style.display = "block";
+//  }
+//  else{
+//    document.getElementById('Title').style.display = "none";
+//  }
+//});
+//});
 </script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="styles.css">
