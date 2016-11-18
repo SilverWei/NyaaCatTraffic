@@ -63,7 +63,7 @@
             frame.contentWindow.scrollTo(ViewLeft, ViewTop);
         }
         else {
-          alert("W:"+ frame.width +"H:"+oImg.width);
+          alert("W:"+ document.body.clientWidth +"H:"+oImg.width);
           if(frame.width < oImg.width)
           {
             var ViewLeft = $(frame.contentWindow).scrollLeft() - (oImg.width * 0.1);
