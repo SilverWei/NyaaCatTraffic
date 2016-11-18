@@ -98,6 +98,13 @@ $(window).resize(function() {
       z-index: 900;
     }
     </style>
+    <script type="text/javascript">
+var u = navigator.userAgent;
+var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+alert('是否是Android：'+isAndroid);
+alert('是否是iOS：'+isiOS);
+</script>
   </head>
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base" >
           <div class="mdl-layout--large-screen-only mdl-layout__header-row" style="position: absolute;right: 0;z-index: 5;color: white;">
