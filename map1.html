@@ -32,7 +32,7 @@ $(function(){
 })
 
 function LoadOver() {
-  document.getElementById('Waiting').innerHTML = '';
+  document.getElementById('Waiting').style.display = "none";
 
   document.getElementById('ConvertedImage').style.display = "block";
   window.scrollTo((document.getElementById('ConvertedImage').width / 2) - (document.body.clientWidth / 2), document.getElementById('ConvertedImage').height / 2) - (document.body.clientWidth / 2);
