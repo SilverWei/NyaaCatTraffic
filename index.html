@@ -55,10 +55,10 @@
       function ImageChange(args) {
         var oImg = window.frames["overview"].document.getElementById("ConvertedImage");
         if (args) {
-            var scrollLeft = $(window).scrollLeft();
-            var scrollTop = $(window).scrollTop();
+            var ViewLeft = $(window).scrollLeft() + (oImg.width * 0.2);
+            var ViewTop = $(window).scrollTop() + (oImg.height * 0.2);
             var frame = document.getElementById('overview');
-            frame.contentWindow.scrollTo(scrollLeft + (oImg.width * 0.2), scrollTop + oImg.height * 0.2);
+            frame.contentWindow.scrollTo(ViewLeft, ViewTop);
             oImg.width = oImg.width * 1.2;
         }
         else {
