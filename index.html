@@ -57,9 +57,9 @@
         if (args) {
             var scrollLeft = $(window).scrollLeft();
             var scrollTop = $(window).scrollTop();
+            var frame = document.getElementById('overview');
             frame.contentWindow.scrollTo(scrollLeft + (oImg.width * 0.2), scrollTop + oImg.height * 0.2);
             oImg.width = oImg.width * 1.2;
-            var frame = document.getElementById('overview');
         }
         else {
             oImg.width = oImg.width / 1.2;
