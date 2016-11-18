@@ -64,7 +64,7 @@
         }
         else {
           alert("W:"+ document.body.clientWidth +"H:"+oImg.width);
-          if(frame.width < oImg.width)
+          if(document.body.clientWidth < oImg.width)
           {
             var ViewLeft = $(frame.contentWindow).scrollLeft() - (oImg.width * 0.1);
             var ViewTop = $(frame.contentWindow).scrollTop() - (oImg.height * 0.1);
