@@ -43,9 +43,8 @@ $(function(){
     }
 function LoadOver() {
   parent.document.getElementById('Waiting1').style.display = "none";
-  document.getElementById('ConvertedImage').style.display = "block";
+
   window.scrollTo((document.getElementById('ConvertedImage').width / 2) - (document.body.clientWidth / 2), document.getElementById('ConvertedImage').height / 2) - (document.body.clientWidth / 2);
-  parent.window.frames["overview"].document.getElementById("ConvertedImage").style.display = "block";
 }
 </script>
 
@@ -54,7 +53,7 @@ function LoadOver() {
 <body class="pageView" bgcolor="#FFFFFF" style="margin: 0px">
 <DIV id="RasterDiv" style="margin:10px;cursor: move;">
 
-  <IMG id="ConvertedImage" SRC="images/NyaaCatTraffic1.png" ondblclick="ImageChange(true)" onload="LoadOver();" ALT="卫星图" style="display: none;" >
+  <IMG id="ConvertedImage" SRC="images/NyaaCatTraffic1.png" ondblclick="ImageChange(true)" onload="LoadOver();" ALT="卫星图" >
 </DIV>
 </body>
 </html>
