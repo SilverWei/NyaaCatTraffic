@@ -54,8 +54,8 @@
   }
 
       function ImageChange(args) {
-        var oImg = window.frames["overview"].document.getElementById("ConvertedImage");
-        var frame = document.getElementById('overview');
+        var oImg = window.frames["overview_View"].document.getElementById("ConvertedImage");
+        var frame = document.getElementById('overview_View');
         if (args) {
           if(document.body.clientWidth * 8 > oImg.width){
             var ViewLeft = $(frame.contentWindow).scrollLeft() + (((oImg.width * 1.2) - oImg.width) / 2);
@@ -73,6 +73,28 @@
             frame.contentWindow.scrollTo(ViewLeft, ViewTop);
           }
         }
+
+        var oImg = window.frames["features_View"].document.getElementById("ConvertedImage");
+        var frame = document.getElementById('features_View');
+        if (args) {
+          if(document.body.clientWidth * 8 > oImg.width){
+            var ViewLeft = $(frame.contentWindow).scrollLeft() + (((oImg.width * 1.2) - oImg.width) / 2);
+            var ViewTop = $(frame.contentWindow).scrollTop() + (((oImg.height * 1.2) - oImg.height) / 2);
+            oImg.width = oImg.width * 1.2;
+            frame.contentWindow.scrollTo(ViewLeft, ViewTop);
+          }
+        }
+        else {
+          if(document.body.clientWidth < oImg.width)
+          {
+            var ViewLeft = $(frame.contentWindow).scrollLeft() - ((oImg.width - (oImg.width / 1.2)) / 2);
+            var ViewTop = $(frame.contentWindow).scrollTop() - ((oImg.height - (oImg.height / 1.2)) / 2);
+            oImg.width = oImg.width / 1.2;
+            frame.contentWindow.scrollTo(ViewLeft, ViewTop);
+          }
+        }
+
+
     }
     $(document).ready(function(){
 $(window).resize(function() {
@@ -124,7 +146,7 @@ $(window).resize(function() {
       <main id="mdl_Main" class="mdl-layout__content">
         <div class="mdl-layout__tab-panel is-active" id="overview" name="overview" >
 
-          <iframe frameborder=0 src="map1.html" style="width:100%;position: absolute;height: 100%;padding: 0;top: 0;right: 0;left: 0;bottom: 0;"></iframe>
+          <iframe frameborder=0 src="map1.html" id="overview_View" style="width:100%;position: absolute;height: 100%;padding: 0;top: 0;right: 0;left: 0;bottom: 0;"></iframe>
 
           <div id="Waiting1" style="width:100%;position: absolute;height: 100%;padding: 0;top: 0;right: 0;left: 0;bottom: 0;">
           <div style="margin: auto;position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100px;height: 100px;">
@@ -137,7 +159,7 @@ $(window).resize(function() {
         </div>
 
         <div class="mdl-layout__tab-panel" id="features" name="features" >
-          <iframe frameborder=0 src="map2.html" style="width:100%;position: absolute;height: 100%;padding: 0;top: 0;right: 0;left: 0;bottom: 0;"></iframe>
+          <iframe frameborder=0 src="map2.html" id="features_View" style="width:100%;position: absolute;height: 100%;padding: 0;top: 0;right: 0;left: 0;bottom: 0;"></iframe>
           <div id="Waiting2" style="width:100%;position: absolute;height: 100%;padding: 0;top: 0;right: 0;left: 0;bottom: 0;">
           <div style="margin: auto;position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100px;height: 100px;">
           <div class="mdl-spinner mdl-js-spinner" style="width: 100px;height: 100px;"></div>
