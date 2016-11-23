@@ -100,9 +100,11 @@
 $(window).resize(function() {
   if((document.body.clientWidth * 0.6) > 400){
     document.getElementById('Title').style.display = "block";
+    document.getElementById('T_img').style.display = "block";
   }
   else{
     document.getElementById('Title').style.display = "none";
+    document.getElementById('T_img').style.display = "none";
   }
 });
 });
@@ -112,6 +114,7 @@ $(window).resize(function() {
     var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
     if(isAndroid == true || isiOS == true){
     document.getElementById('Title').style.display = "none";
+    document.getElementById('T_img').style.display = "none";
     }
 }
 </script>
@@ -126,6 +129,15 @@ $(window).resize(function() {
       margin-right: 40px;
       margin-bottom: 40px;
       z-index: 900;
+    }
+    .T_img{
+    position: relative;
+    right: 10px;
+    background-image: url(images/NyaaCatTraffic3.png);
+    height: 52px;
+    background-size: 1556px;
+    background-position-y: 66px;
+    float: right;
     }
     </style>
 
@@ -170,16 +182,25 @@ $(window).resize(function() {
         </div>
 
       </main>
-      <footer class="mdl-mega-footer" style="bottom: 0;width: 100%;height:55px;">
-        <div class="mdl-mega-footer--bottom-section">
+      <footer class="mdl-mega-footer" style="bottom: 0;width: 100%;min-height: 97px;">
+        <div class="mdl-mega-footer--bottom-section" style="position: absolute;float: left;bottom: 0;">
           <div class="mdl-logo">地图最后更新时间</div>
           <ul class="mdl-mega-footer--link-list">
             <li>2016年11月18日11:36:53</li>
           </ul>
         </div>
+        <div id="T_img" style="background-color: rgb(27, 27, 27);float: right;border-radius: 15px;padding: 15px;position: relative;right: 50px;margin-left: 265px;">
+                <div alt="图例" class="T_img" style="width: 183px;background-position-x: -1345px;"></div>
+                <div alt="图例" class="T_img" style="width: 181px;background-position-x: -1144px;"></div>
+                <div alt="图例" class="T_img" style="width: 183px;background-position-x: -935px;"></div>
+                <div alt="图例" class="T_img" style="width: 238px;background-position-x: -696px;"></div>
+                <div alt="图例" class="T_img" style="width: 201px;background-position-x: -496px;"></div>
+                <div alt="图例" class="T_img" style="width: 210px;background-position-x: -274px;"></div>
+                <div alt="图例" class="T_img" style="width: 239px;background-position-x: -35px;"></div>
+        </div>
       </footer>
     </div>
-    <div id="view-source" class="mdl-button mdl-button--raised mdl-button--accent" style="margin-bottom: 130px;margin-right: 20px;padding: 0;background-color: white;">
+    <div id="view-source" class="mdl-button mdl-button--raised mdl-button--accent" style="margin-right: 20px;top: 90px;padding: 0;background-color: white;">
     <button class="mdl-button mdl-js-button" onclick="ImageChange(true)">
     <i class="material-icons" role="presentation" style="color: #E91E63;" >add</i>
       <span class="visuallyhidden">Add</span>
